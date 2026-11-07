@@ -1,0 +1,159 @@
+:root {
+  --background: #f4f6fb;
+  --surface: #ffffff;
+  --text: #1c2433;
+  --muted: #64708a;
+  --border: #e1e6f0;
+  --accent: #2f5bea;
+  --applied-background: #e8efff;
+  --applied-text: #1f45a8;
+  --interview-background: #e5f6ec;
+  --interview-text: #1d7644;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+}
+
+.site-header {
+  padding: 24px 20px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  letter-spacing: -0.02em;
+}
+
+.tagline {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+main {
+  padding: 32px 20px;
+}
+
+.applications {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 12px;
+  margin-bottom: 16px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.section-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+table {
+  width: 100%;
+  min-width: 620px;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  color: var(--muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: #fafbfe;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+tbody tr:hover {
+  background: #f7f9ff;
+}
+
+tbody tr:hover .empty-message {
+  background: transparent;
+}
+
+a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.status {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.status-applied {
+  background: var(--applied-background);
+  color: var(--applied-text);
+}
+
+.status-interview {
+  background: var(--interview-background);
+  color: var(--interview-text);
+}
+
+.empty-message {
+  padding: 40px 18px;
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .site-header {
+    padding: 20px 16px;
+  }
+
+  main {
+    padding: 24px 12px;
+  }
+
+  th,
+  td {
+    padding: 12px 14px;
+  }
+}
